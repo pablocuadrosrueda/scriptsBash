@@ -1,4 +1,6 @@
-#:Descripcion: Escribe un shell script que se llame usrslogin.sh que reciba varios nombres de usuario o logins, y para cada login compruebe si existe una cuenta con ese nombre de usuario. Debe decir si ese nombre está libre o si hay ya un usuario con ese nombre.
+#!/bin/bash
+#Autor: Pablo Cuadros Rueda
+#Descripcion: Escribe un shell script que se llame usrslogin.sh que reciba varios nombres de usuario o logins, y para cada login compruebe si existe una cuenta con ese nombre de usuario. Debe decir si ese nombre está libre o si hay ya un usuario con ese nombre.
 
 #Para este script recordemos que debemos utilizar el archivo /etc/passwd
 

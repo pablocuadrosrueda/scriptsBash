@@ -1,4 +1,6 @@
-#Ecribe un shell script que reciba uno o más nombre de usuario, y compruebe para cada usuario si en el directorio base de ese usuario existe un directorio #llamado bin. Si existe, mueve los ficheros ejecutables al directorio bin, si no existe, lo crea y mueve todos los ficheros eiecutables que haya en el directorio base del usuario a ese directorio 
+#!/bin/bash
+#Autor: Pablo Cuadros Rueda
+#Descripción:Ecribe un shell script que reciba uno o más nombre de usuario, y compruebe para cada usuario si en el directorio base de ese usuario existe un directorio #llamado bin. Si existe, mueve los ficheros ejecutables al directorio bin, si no existe, lo crea y mueve todos los ficheros eiecutables que haya en el directorio base del usuario a ese directorio 
 #Para formar de directorio base debes incluir esta línea:
 #dirbase=$( dirname SHOME )/${1} )
 #Para quedarte con los nombres de ficheros ejecutables debes incluir esta línea:
