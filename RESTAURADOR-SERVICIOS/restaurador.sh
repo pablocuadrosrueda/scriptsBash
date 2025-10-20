@@ -22,7 +22,7 @@
 #Servicio a monitorear
 servicio="ssh"
 #Ruta absoluta al archivo.csv ( para correcto funcionamiento el archivo debe estar completamente vacío )
-rutalog="/home/pablocuadroos/Desktop/scriptsBash/RESTAURADOR-SERVICIOS/data/log.csv"
+rutalog=""
 #<--------------------------------------------------------------------------->
 
 ################ FUNCIÓN DE REGISTRO PARA LOG ################
