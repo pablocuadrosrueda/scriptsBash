@@ -1,0 +1,79 @@
+🗓️ Plan de proyecto: Monitor de conexiones activas (Bash)
+🧭 Objetivo general
+Construir un script Bash que capture las conexiones activas del sistema, guarde los datos en CSV, mantenga una rotación de snapshots y detecte actividad sospechosa (IPs con muchas conexiones).
+📅 Semana 1 — Captura y registro básico
+Día 1 – Familiarización con herramientas
+🎯 Objetivo: entender la materia prima.
+Ejecuta manualmente ss -tunaop y analiza su salida.
+Identifica qué campos te sirven: protocolo, estado, IP origen/destino, puertos, proceso.
+Guarda un ejemplo de salida en un archivo de texto (ss_output.txt) para practicar parsing.
+💡 Tarea: documenta en un mini .md o bloc de notas qué significan los campos que usarás.
+Día 2 – Extracción de datos
+🎯 Objetivo: obtener solo las líneas relevantes y filtrarlas correctamente.
+Usa grep, awk, cut para aislar columnas.
+Extrae las IPs origen y destino de la salida de ss.
+Haz que la salida se vea limpia, tipo:
+proto src_ip src_port dst_ip dst_port state pid_prog
+💡 Tip: hazlo con un solo comando, sin loops todavía.
+Día 3 – Generar CSV
+🎯 Objetivo: transformar los datos a CSV.
+Añade una cabecera estática (timestamp, proto, src_ip, …).
+Redirige la salida a un archivo conns-YYYYMMDD_HHMMSS.csv.
+Comprueba que el CSV se abre correctamente en LibreOffice o VSCode.
+💡 Tarea: añadir un timestamp al principio del script (date "+%Y-%m-%d %H:%M:%S").
+Día 4 – Automatizar snapshots
+🎯 Objetivo: permitir ejecuciones repetidas sin sobrescribir archivos.
+Usa una variable SNAP_TS=$(date +%Y%m%d_%H%M%S) para nombrar ficheros.
+Crea una carpeta data/ o snapshots/ para almacenar resultados.
+Ejecuta el script dos veces → deben generarse dos CSV distintos.
+💡 Tarea: asegurarte de que el script crea la carpeta si no existe.
+Día 5 – Rotación de ficheros
+🎯 Objetivo: evitar acumulación de snapshots antiguos.
+Implementa una lógica para mantener solo los N más recientes (p. ej. 10).
+Usa ls -t | tail -n +11 | xargs rm como base conceptual (no la copies literal aún).
+Prueba que elimina correctamente los viejos sin afectar a los nuevos.
+💡 Tarea: deja un comentario explicando cómo funciona la rotación.
+📅 Semana 2 — Análisis, alertas y automatización
+Día 6 – Conteo por IP
+🎯 Objetivo: analizar la última captura.
+Usa awk o cut para extraer la columna de IP origen.
+Haz un conteo de frecuencia (sort | uniq -c | sort -nr).
+Guarda el resultado en un fichero temporal o imprime en pantalla.
+💡 Tarea: documenta cuál será el umbral de alerta (p. ej. 50 conexiones).
+Día 7 – Registro de alertas
+🎯 Objetivo: crear alerts.log.
+Si alguna IP supera el umbral, escribe una línea con:
+timestamp
+IP sospechosa
+número de conexiones
+Usa formato CSV o texto plano.
+💡 Tip: usa date para timestamp y >> para añadir al log.
+Día 8 – Integración con cron
+🎯 Objetivo: ejecutar automáticamente el monitor.
+Abre el crontab (crontab -e) y programa ejecución cada 5 min.
+Usa rutas absolutas para todo.
+Verifica que los nuevos CSV aparecen automáticamente.
+💡 Tarea: añadir prueba manual + verificación del cron.log (opcional).
+Día 9 – Validaciones y limpieza
+🎯 Objetivo: asegurar fiabilidad.
+Simula actividad real (abrir múltiples conexiones, SSH, etc.).
+Verifica que las alertas se disparan correctamente.
+Comprueba permisos, rutas y logs.
+💡 Tarea: añade control de errores (si ss falla, mostrar mensaje y salir).
+Día 10 – Documentación final
+🎯 Objetivo: empaquetar el proyecto.
+Crea un README.md con:
+descripción del script
+requisitos
+uso manual y automático
+explicación de columnas CSV
+ejemplo de salida
+Opcional: añade una licencia MIT o similar.
+💡 Tarea: haz commit en GitHub y marca la versión como v1.0.
+🚀 Resultado final
+Al terminar tendrás un sistema que:
+Monitoriza conexiones activas de red.
+Registra snapshots periódicos con rotación.
+Detecta IPs sospechosas por número de conexiones.
+Se ejecuta automáticamente con cron.
+Está documentado profesionalmente.
