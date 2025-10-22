@@ -1,0 +1,46 @@
+Netid State  Recv-Q Send-Q       Local Address:Port   Peer Address:PortProcess                                                           
+udp   UNCONN 0      0                127.0.0.1:671         0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:41727       0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:33609       0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:39891       0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:5353        0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:38179       0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:42363       0.0.0.0:*                                                                     
+udp   UNCONN 0      0               127.0.0.54:53          0.0.0.0:*                                                                     
+udp   UNCONN 0      0            127.0.0.53%lo:53          0.0.0.0:*                                                                     
+udp   ESTAB  0      0      192.168.64.2%enp0s1:68     192.168.64.1:67                                                                    
+udp   UNCONN 0      0                  0.0.0.0:111         0.0.0.0:*                                                                     
+udp   UNCONN 0      0                  0.0.0.0:37049       0.0.0.0:*                                                                     
+udp   UNCONN 0      0                     [::]:33181          [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:51784          [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:41791          [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:5353           [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:50716          [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:57093          [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:38901          [::]:*                                                                     
+udp   UNCONN 0      0                     [::]:111            [::]:*                                                                     
+tcp   LISTEN 0      511                0.0.0.0:8080        0.0.0.0:*                                                                     
+tcp   LISTEN 0      64                 0.0.0.0:38827       0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096               0.0.0.0:59301       0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096               0.0.0.0:57283       0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096             127.0.0.1:631         0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096               0.0.0.0:40651       0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096         127.0.0.53%lo:53          0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096               0.0.0.0:41359       0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096            127.0.0.54:53          0.0.0.0:*                                                                     
+tcp   LISTEN 0      64                 0.0.0.0:2049        0.0.0.0:*                                                                     
+tcp   LISTEN 0      511                0.0.0.0:80          0.0.0.0:*                                                                     
+tcp   LISTEN 0      4096               0.0.0.0:111         0.0.0.0:*                                                                     
+tcp   ESTAB  0      0             192.168.64.2:34190 34.107.243.93:443  users:(("firefox",pid=2930,fd=98)) timer:(keepalive,5min42sec,0) 
+tcp   ESTAB  0      0             192.168.64.2:36094  104.18.39.21:443  users:(("firefox",pid=2930,fd=173)) timer:(keepalive,5min59sec,0)
+tcp   LISTEN 0      64                    [::]:44421          [::]:*                                                                     
+tcp   LISTEN 0      4096                  [::]:48457          [::]:*                                                                     
+tcp   LISTEN 0      4096                  [::]:42035          [::]:*                                                                     
+tcp   LISTEN 0      511                   [::]:8080           [::]:*                                                                     
+tcp   LISTEN 0      4096                  [::]:37025          [::]:*                                                                     
+tcp   LISTEN 0      4096                     *:22                *:*                                                                     
+tcp   LISTEN 0      64                    [::]:2049           [::]:*                                                                     
+tcp   LISTEN 0      511                   [::]:80             [::]:*                                                                     
+tcp   LISTEN 0      4096                  [::]:111            [::]:*                                                                     
+tcp   LISTEN 0      4096                  [::]:33523          [::]:*                                                                     
+tcp   LISTEN 0      4096                 [::1]:631            [::]:*                                                                     

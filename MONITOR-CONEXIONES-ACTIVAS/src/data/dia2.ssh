@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#En este script vamos a familirizarnos con la orden awk
+
+
+########################################### MANUAL BREVE DE USO ###########################################
+
+# awk 'condición {acción}' archivo
+
+
+
+###########################################################################################################
+
+echo "Orden 1 extraer conexiones establecidas"
+
+cat sstunop.txt | awk '$2=="ESTAB" {print }' 
+
+
+echo "Orden 2 extraer la IP de destino sin el puerto" 
