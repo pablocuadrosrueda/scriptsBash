@@ -7,6 +7,11 @@
 
 # awk 'condición {acción}' archivo
 
+#Con expresiones regulares: 
+
+	# awk '/regex/ {acción}' archivo
+
+	# awk '$2 ~ /LISTEN/ {print $0}'
 
 
 ###########################################################################################################
@@ -15,5 +20,23 @@ echo "Orden 1 extraer conexiones establecidas"
 
 cat sstunop.txt | awk '$2=="ESTAB" {print }' 
 
+echo "Orden 2 extraer la IP de destino sin el puerto"
 
-echo "Orden 2 extraer la IP de destino sin el puerto" 
+awk '$5 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:/ {print $5}' sstunop.txt | cut -d":" -f1
+
+echo "🧪 Ejercicio 3 — Extraer IP + puerto de destino (bonito formato)"
+
+awk '$5 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]/ {print $5}/'
+
+
+
+#
+#
+# awk '$5 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:/ {
+#    split($5, campo, ":");
+#    print campo[1];
+# }' sstunop.txt
+#
+#
+#
+

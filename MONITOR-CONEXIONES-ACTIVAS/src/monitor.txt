@@ -1,0 +1,73 @@
+#!/bin/bash
+
+##################################################################### DÍA 1 #####################################################################
+	
+#Tarea de hoy familiarización de los campos que vamos a utilizar. 
+
+#Información que recapitulamos:
+
+	# Los separadores de la salida son tabulaciones 
+	# Si estoy en lo cierto creo que lo más lógico es recopilar información en caso de que el campo STATE sea o bien ESTAB o LISTEN 
+	
+	# usaremos las opciones -tunop para filtrar solo conexiones tcp o udp 
+	
+	#Considero que la información más relevante es: 
+		# la interfaz de red local y el puerto
+		# la IP destino y el puerto 
+		# el nombre del proceso
+	
+	 
+
+
+##################################################################################################################################################
+
+##################################################################### DÍA 2 #####################################################################
+	
+#Tarea de hoy: herramientas de filtrado que vamos a utilizar.
+
+	- awk, grep y cut son candidatas ( manejo mejor las dos últimas por tanto usaré la primera )  
+	
+	IMPORTANTE: por ahora vamos a realizar este script sobre un fichero que almacenará la salida en un instante de ss -tunop.
+	Dicho fichero es: sstunop.txt
+
+	1) Mini-esquema de Expresiones Regulares (regex) — conceptos clave Metacaracteres básicos
+
+	. → cualquier carácter (salvo salto de línea).
+
+	^ → inicio de línea.
+
+	$ → fin de línea.
+
+	[] → clase de caracteres, p.ej. [0-9], [a-zA-Z].
+
+	[^] → negación en clase, p.ej. [^0-9].
+
+	| → alternancia (OR), p.ej. foo|bar.
+
+	() → agrupación y captura.
+
+	Cuantificadores
+
+	* → 0 o más.
+
+	+ → 1 o más.
+
+	? → 0 o 1.
+
+	{n} → exactamente n.
+
+	{n,m} → entre n y m.
+
+	Metas útiles
+
+	\d (en algunos motores) → dígito; en awk/grep POSIX usa [0-9].
+
+	\. → punto literal.
+
+	\s → espacio (no siempre en awk; mejor usar [[:space:]]).
+
+	\b → límite de palabra (no soportado por todos).
+	
+##################################################################################################################################################
+
+
